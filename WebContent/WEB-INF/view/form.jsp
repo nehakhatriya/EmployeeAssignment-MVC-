@@ -11,6 +11,20 @@
 .error {
 	color: red;
 }
+.text {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+div {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
 </style>
 <title>Employee</title>
 </head>
@@ -19,15 +33,15 @@
 	<div class="container">
 		<h4 style="text-align: center;">Employee Form</h4>
 		<form:form action="employee" method="post" modelAttribute="employee">
-    Employee ID : <br><form:input path="empID" />
+    Employee ID : <br><form:input path="empID" cssClass="text"/>
 			<form:errors path="empID" cssClass="error" />
 			<br>
 			<br>
-    Employee Name: <br>  <form:input path="Name" />
+    Employee Name: <br>  <form:input path="Name" cssClass="text"/>
 			<form:errors path="Name" cssClass="error" />
 			<br>
 			<br>
-			<button type="submit" class="btn btn-success">ADD</button>
+			<button type="submit" class="btn btn-success" >ADD EMPLOYEE</button>
 		</form:form>
 
 		<h4 style="text-align: center;">Employees Registered</h4>
@@ -35,8 +49,8 @@
 		<table class="table">
 			<thead>
 				<tr>
-					<th scope="col"><a href="/HibernateMVC/app/employee/sort?value=id">ID</a></th>
-					<th scope="col"><a href="/HibernateMVC/app/employee/sort?value=name">Name</a></th>
+					<th scope="col"><a href="/HibernateMVC/app/employee?sort=id">ID</a></th>
+					<th scope="col"><a href="/HibernateMVC/app/employee?sort=name">Name</a></th>
 				</tr>
 			</thead>
 			<tbody>
