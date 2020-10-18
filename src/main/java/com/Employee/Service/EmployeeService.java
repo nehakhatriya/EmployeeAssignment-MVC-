@@ -16,4 +16,7 @@ public interface EmployeeService {
 
 	void updateEmployee(Employee employee);
 
+	List<Employee> listEmployees(String val);
+
+
 }

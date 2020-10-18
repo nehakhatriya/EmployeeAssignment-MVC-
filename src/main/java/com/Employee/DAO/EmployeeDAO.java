@@ -12,4 +12,6 @@ public interface EmployeeDAO {
 
 	void deleteEmployee(int empid);
 
+	List<Employee> listEmployee(String val);
+
 }
